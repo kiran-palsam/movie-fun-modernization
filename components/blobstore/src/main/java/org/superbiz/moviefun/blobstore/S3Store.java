@@ -6,6 +6,7 @@ import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
 import com.amazonaws.util.IOUtils;
 import org.apache.tika.Tika;
+import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

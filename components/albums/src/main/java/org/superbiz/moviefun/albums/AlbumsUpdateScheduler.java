@@ -1,12 +1,18 @@
 package org.superbiz.moviefun.albums;
 
+import com.amazonaws.services.s3.AmazonS3;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.web.client.RestOperations;
+import org.superbiz.moviefun.blobstore.BlobStore;
+import org.superbiz.moviefun.blobstore.FileStore;
+import org.superbiz.moviefun.blobstore.S3Store;
 
 import javax.sql.DataSource;
 
@@ -57,4 +63,5 @@ public class AlbumsUpdateScheduler {
 
         return updatedRows > 0;
     }
+
 }
