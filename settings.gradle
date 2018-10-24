@@ -4,6 +4,9 @@ include "applications:movie-fun-app"
 include "applications:album-service"
 include "applications:movie-service"
 
+include "databases:album-database"
+include "databases:movie-database"
+
 include "components:albums"
 include "components:blobstore"
 include "components:movies"
