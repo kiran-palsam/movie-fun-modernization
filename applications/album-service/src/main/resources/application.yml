@@ -1,4 +1,4 @@
-server.port: 8081
+server.port: 8083
 
 spring:
   jpa:
@@ -12,6 +12,10 @@ spring:
       max-idle: 4
       min-idle: 4
       initial-size: 4
+
+security:
+  basic:
+    enabled: false
 
 logging.level:
   root: WARN

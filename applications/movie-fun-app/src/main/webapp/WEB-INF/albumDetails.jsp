@@ -18,6 +18,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <c:set var="language" value="${pageContext.request.locale}"/>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+
 <fmt:setLocale value="${language}"/>
 
 <!DOCTYPE html>
@@ -80,6 +83,7 @@
     <h3>Change cover</h3>
 
     <form action="/albums/${requestScope.album.id}/cover" method="POST" enctype="multipart/form-data">
+        <sec:csrfInput />
         <input type="file" name="file" accept=".gif,.jpg,.jpeg,.png">
         <input type="submit" value="Upload">
     </form>

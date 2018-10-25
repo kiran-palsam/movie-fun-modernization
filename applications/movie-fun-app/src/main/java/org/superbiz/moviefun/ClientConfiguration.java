@@ -14,9 +14,14 @@ public class ClientConfiguration {
     @Value("${albums.url}") String albumsUrl;
     @Value("${movies.url}") String moviesUrl;
 
+//    @Bean
+//    public RestOperations restOperations() {
+//        return new RestTemplate();
+//    }
+
     @Bean
-    public RestOperations restOperations() {
-        return new RestTemplate();
+    public RestOperations restOperations(RestTemplate restTemplate) {
+        return restTemplate;
     }
 
     @Bean
