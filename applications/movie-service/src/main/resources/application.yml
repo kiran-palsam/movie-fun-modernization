@@ -1,5 +1,4 @@
 server.port: 8082
-
 spring:
   jpa:
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
@@ -12,6 +11,8 @@ spring:
       max-idle: 4
       min-idle: 4
       initial-size: 4
+  application:
+    name: movie-service
 
 logging.level:
   root: WARN

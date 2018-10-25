@@ -10,6 +10,7 @@ buildscript {
         slf4jVersion = "1.7.21"
         junitVersion = "4.12"
         mysqlVersion = "5.1.40"
+        springCloudServicesVersion = "1.6.4.RELEASE"
     }
 
     repositories {
